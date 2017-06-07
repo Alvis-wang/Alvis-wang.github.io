@@ -49,7 +49,7 @@
 			<!--<img src="https://github.com/Alvis-wang/Alvis-wang.github.io/blob/master/img/header_02.jpg?raw=true" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">-->
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">王振升</a></h1>
+		  <h1 class="header-author"><a href="/">王振升520it</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">如果你想得到你从未得到的东西，那么你必须做你从未做过的事情！</p>
@@ -111,7 +111,7 @@
 				<img src="https://github.com/Alvis-wang/Alvis-wang.github.io/blob/master/img/header_02.jpg?raw=true" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">王振升</h1>
+			  <h1 class="header-author js-header-author">王振升520it</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>如果你想得到你从未得到的东西，那么你必须做你从未做过的事情！<i class="icon icon-quo-right"></i></p>
@@ -162,6 +162,205 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-新的文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/08/新的文章/">新的文章</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/08/新的文章/" class="archive-article-date">
+  	<time datetime="2017-06-07T16:00:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="这是一篇新鞋的"><a href="#这是一篇新鞋的" class="headerlink" title="这是一篇新鞋的"></a>这是一篇新鞋的</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/08/新的文章/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-Flex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/30/Flex/">浅析flex布局</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/30/Flex/" class="archive-article-date">
+  	<time datetime="2017-05-30T11:58:36.555Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>flex布局是CSS3的一个新特性，很实用，尤其在移动端方面，无异于如鱼得水！<br></p>
+<p></p><p style="color:purple;opacity:0.6">废话不多说，直接上干货（华丽的分割线<strong>↓↓↓↓</strong>）</p><br>-<p></p>
+<p></p><h1 style="color:orange"> 一、Flex布局是什么? </h1><br>flex是Flex Box的缩写，意为“弹性布局”，用于为盒装模型提供最大的灵活性。<br><br>任何一个容器都可以指定为Flex布局。<code>div{display:flex}</code><br><br>行内元素也可以使用flex布局：<code>span{display:flex}</code><strong>且该行内元素可以设置宽高！</strong><br><p></p>
+<p>Webkit内核的浏览器，必须加上-webkit前缀。</p>
+<p><code>.box{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}</code></p>
+<p></p><h1 style="color:orange"> 二、Flex布局解决什么问题? </h1><br>布局问题：布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。<br><br>而Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。<p></p>
+<p></p><h1 style="color:orange"> 三、Flex布局的基本概念? </h1><br>采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。<br><img src="http://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png"><br>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。<br>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。<p></p>
+<p></p><h1 style="color:orange"> 四、容器的六个属性</h1><br>以下6个属性设置在容器上。<p></p>
+<ul>
+<li>flex-direction &lt;–决定主轴的方向（即项目的排列方向）–&gt;</li>
+<li>flex-wrap&lt;–flex-wrap属性定义，如果一条轴线排不下，如何换行–&gt;</li>
+<li>flex-flow&lt;–flex-flow属性是flex-direction属性和flex-wrap属性的简写形式–&gt;</li>
+<li>justify-content&lt;–justify-content属性定义了项目在主轴上的对齐方式–&gt;</li>
+<li>align-items&lt;–align-items属性定义项目在交叉轴上如何对齐。–&gt;</li>
+<li>align-content&lt;–align-content属性定义了多根轴线的对齐方式–&gt;</li>
+</ul>
+<p></p><h2>4.1flex-direction属性</h2><br>flex-direction属性决定主轴的方向（即项目的排列方向）。<br><code>.box {
+  flex-direction: row | row-reverse | column | column-reverse;
+}</code><p></p>
+<p><img src="http://www.runoob.com/wp-content/uploads/2015/07/0cbe5f8268121114e87d0546e53cda6e.png"></p>
+<p>它可能有4个值。</p>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+<p></p><h2>4.2 flex-wrap属性</h2><br>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。<br><img src="http://www.runoob.com/wp-content/uploads/2015/07/903d5b7df55779c03f2687a7d4d6bcea.png"><br>    .box{flex-wrap: nowrap | wrap | wrap-reverse;}<br>它可能取三个值。<p></p>
+<ul>
+<li><ol>
+<li>nowrap（默认）：不换行。<br><img src="http://www.runoob.com/wp-content/uploads/2015/07/9da1f23965756568b4c6ea7124db7b9a.png
+"> </li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><ol>
+<li>wrap：换行，第一行在上方。</li>
+</ol>
+</li>
+</ul>
+<p><img src="http://www.runoob.com/wp-content/uploads/2015/07/3c6b3c8b8fe5e26bca6fb57538cf72d9.jpg"> </p>
+<p>-（3）wrap-reverse：换行，第一行在下方。<br><img src="http://www.runoob.com/wp-content/uploads/2015/07/fb4cf2bab8b6b744b64f6d7a99cd577c.jpg"> </p>
+<p></p><h2>4.3 flex-flow</h2><br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。<br>    <code>.box {flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;}</code><p></p>
+<p></p><h2>4.4 justify-content属性</h2><br>justify-content属性定义了项目在主轴上的对齐方式。<br> <img src="http://www.runoob.com/wp-content/uploads/2015/07/c55dfe8e3422458b50e985552ef13ba5.png"><br>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。<br><p></p>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<p></p><h2>4.5 align-items属性</h2><br>align-items属性定义项目在交叉轴上如何对齐。<br>    <code>.box {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}</code><br><img src="http://www.runoob.com/wp-content/uploads/2015/07/2b0c39c7e7a80d5a784c8c2ca63cde17.png"> <p></p>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。<br></p>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<p></p><h2>4.6 align-content属性</h2><br>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。<br>    <code>.box {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}</code><p></p>
+<p><img src="http://www.runoob.com/wp-content/uploads/2015/07/f10918ccb8a13247c9d47715a2bd2c33.png"><br>该属性可能取6个值。<br></p>
+<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li><p>stretch（默认值）：轴线占满整个交叉轴。<br></p><h1>五、项目属性</h1><br>以下6个属性设置在项目上<p></p>
+</li>
+<li><p>order</p>
+</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+<p></p><h2>5.1 order属性</h2><br>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。<br>    <code>.item {
+  order: &lt;integer&gt;;
+}</code><br><img src="http://www.runoob.com/wp-content/uploads/2015/07/59e399c72daafcfcc20ede36bf32f266.png"> <p></p>
+<p></p><h2>5.2 flex-grow属性</h2><br>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。<br>  <code>.item {
+  flex-grow: &lt;number&gt;; /* default 0 */
+}</code><br><img src="http://www.runoob.com/wp-content/uploads/2015/07/f41c08bb35962ed79e7686f735d6cd78.png"><br>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。<p></p>
+<p></p><h2>5.3 flex-shrink属性</h2><br>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br>    <code>.item {
+  flex-shrink: &lt;number&gt;; /* default 1 */
+}</code><br><img src="http://www.runoob.com/wp-content/uploads/2015/07/240d3e960043a729bb3ff5e34987904f.jpg"><br>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。<p></p>
+<p></p><h2>5.4 flex-basis属性</h2><br>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。<br>    <code>.item {
+  flex-basis: &lt;length&gt; | auto; /* default auto */
+}</code><p></p>
+<p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<p></p><h2>5.5 flex属性</h2><br>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。<br>    <code>.item {
+  flex: none | [ &lt;&#39;flex-grow&#39;&gt; &lt;&#39;flex-shrink&#39;&gt;? || &lt;&#39;flex-basis&#39;&gt; ]
+}</code><br>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br><br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。<p></p>
+<p></p><h2>5.6 align-self属性</h2><br>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。<br>    <code>.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}</code><br><img src="http://www.runoob.com/wp-content/uploads/2015/07/55b19171b8b6b9487d717bf2ecbba6de.png"><br>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。<br><br>来源：<a href="http://http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" title="来源" target="_blank" rel="external">http://http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a><p></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/30/Flex/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -229,7 +428,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 王振升
+    		&copy; 2017 王振升520it
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
