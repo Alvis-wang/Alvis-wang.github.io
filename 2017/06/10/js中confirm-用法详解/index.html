@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/6 | 文盲忙</title>
+  <title>js中confirm()用法详解 | 文盲忙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript HTML5 CSS 前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文盲忙">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+  <meta name="description" content="##说明**confirm函数用于提供确认功能，它首先显示给定的message参数所包含的信息，并提供两个可选择的回答“ok”和“cancel”，然后等待用户选择其中的一个。如果用户选择“ok”则返回true；否则，如若选择“cancel”则返回false。该函数的语法格式如下： `window.confirm (message, ok, cancel)` 其中参数message是欲显示的字符串形">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js中confirm()用法详解">
+<meta property="og:url" content="http://yoursite.com/2017/06/10/js中confirm-用法详解/index.html">
 <meta property="og:site_name" content="文盲忙">
-<meta property="og:description" content="JavaScript HTML5 CSS 前端">
+<meta property="og:description" content="##说明**confirm函数用于提供确认功能，它首先显示给定的message参数所包含的信息，并提供两个可选择的回答“ok”和“cancel”，然后等待用户选择其中的一个。如果用户选择“ok”则返回true；否则，如若选择“cancel”则返回false。该函数的语法格式如下： `window.confirm (message, ok, cancel)` 其中参数message是欲显示的字符串形">
+<meta property="og:image" content="http://i.imgur.com/54vnrzp.png">
+<meta property="og:updated_time" content="2017-06-10T12:46:48.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文盲忙">
-<meta name="twitter:description" content="JavaScript HTML5 CSS 前端">
+<meta name="twitter:title" content="js中confirm()用法详解">
+<meta name="twitter:description" content="##说明**confirm函数用于提供确认功能，它首先显示给定的message参数所包含的信息，并提供两个可选择的回答“ok”和“cancel”，然后等待用户选择其中的一个。如果用户选择“ok”则返回true；否则，如若选择“cancel”则返回false。该函数的语法格式如下： `window.confirm (message, ok, cancel)` 其中参数message是欲显示的字符串形">
+<meta name="twitter:image" content="http://i.imgur.com/54vnrzp.png">
   
     <link rel="alternative" href="/atom.xml" title="文盲忙" type="application/atom+xml">
   
@@ -161,103 +164,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js中confirm-用法详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/10/js中实现页面跳转的方法/" class="archive-article-date">
-  	<time datetime="2017-06-10T12:47:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/js中实现页面跳转的方法/">““js中实现页面跳转的方法”</a>
+    <h1 class="article-title" itemprop="name">
+      js中confirm()用法详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/10/js中confirm-用法详解/" class="archive-article-date">
+        
+        <a href="/2017/06/10/js中confirm-用法详解/" class="archive-article-date">
   	<time datetime="2017-06-10T08:33:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/js中confirm-用法详解/">js中confirm()用法详解</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##说明<br>**confirm函数用于提供确认功能，它首先显示给定的message参数所包含的信息，并提供两个可选择的回答“ok”和“cancel”，然后等待用户选择其中的一个。如果用户选择“ok”则返回true；否则，如若选择“cancel”则返回false。该函数的语法格式如下：</p>
+<pre><code>`window.confirm (message, ok, cancel)`
+</code></pre><p>其中参数message是欲显示的字符串形式的提示信息；参数ok也是用于显示的一个字符串信息，它可以是“OK”，也可以是其他表示OK意义的文本信息，如“I Agree”、“I Like”等等；同样，参数cancel也是用于显示的字符串信息，可以是“Cancel”文本，也可以是其他表示Cancel意义的文本信息</p>
+<p>###在用户点击确定按钮或取消按钮把对话框关闭之前，它将阻止用户对浏览器的所有输入。</p>
+<p>###在调用 confirm() 时，将暂停对 JavaScript 代码的执行，在用户作出响应之前，不会执行下一条语句。<br><strong>基本用法：</strong></p>
+<ol>
+<li>confirm()函数中的参数是确认框的提示语。</li>
+<li>.此函数返回值是布尔型的，点击确定，返回值为true，点击取消返回值为false。</li>
+</ol>
+<pre><code>`&lt;div id=&quot;box&quot;&gt;&lt;a href=&quot;www.baidu.com&quot;&gt;百度一下&lt;/a&gt;&lt;/div&gt;`
+</code></pre><p>##js代码<br>    `<br>        var Box = document.getElementsByClassName(‘box’);<br>        var bta = document.getElementsByTagName(‘a’)[0];</p>
+<pre><code>   bta.onclick = function(){
+       var con_r = confirm(&quot;你确定要使用百度搜索么？\n\n请确认！&quot;);
 
-        <div class="article-info info-on-right">
-          
-          
+       if(con_r == true){
+            alert(&quot;你即将进入了百度搜索，注意文明上网哦~~&quot;)
+        }else{
+            bta.href = &quot;#&quot;;
+            alert(&quot;你点击了取消，将停留在此页~~&quot;)
+        }
+        Box.style.backgroundColor = &quot;red&quot;;
+    }
+`
+</code></pre><p>##主要作用</p>
+<ol>
+<li>主要用于删除单条信息确认</li>
+<li>以及一些需要确认的地方，在开发中用的还是比较多的！<br>##遇到的问题</li>
+<li>confirm是Windows的一个方法，在全局情况下会自动执行，所以千万不要把他定义为全局变量（除非有特殊用途自己可结合实际情况处理）！</li>
+<li>绑定该事件时，总有一些莫名奇妙的问题出现，踩了不少坑，我感觉这个和浏览器的解析原理有关系，在此暂时不多讨论，ps:处理方法，1.0采用内联式，所有的和这个事件相关的js代码都采用内联式。2.0采用行内式，也是全部的，内联和行内混着用，就有问题！</li>
+</ol>
+<p>##实例：</p>
+<ol>
+<li>确认是否访问，以便于进行下一步操作<br> <code>&lt;input type=&quot;button&quot; onClick=&quot;if(confirm(&#39;是否打开网页？&#39;)) location=&#39;www.baidu.com&#39;&quot; value=&quot;打开&quot;&gt;</code><br><img src="http://i.imgur.com/54vnrzp.png" alt=""><br>##对于confirm自定义窗口 ，后续仔细研究一下！！敬请期待！</li>
+</ol>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/10/js中confirm-用法详解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/08/设置webstormlocalhost为本地IP/" class="archive-article-date">
-  	<time datetime="2017-06-07T16:00:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/08/设置webstormlocalhost为本地IP/">设置webstormlocalhost为本地IP</a>
-    </h1>
+    <a href="/2017/06/10/js中实现页面跳转的方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ““js中实现页面跳转的方法”
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/08/设置webstormlocalhost为本地IP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设置webstormlocalhost为本地IP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -280,8 +361,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
