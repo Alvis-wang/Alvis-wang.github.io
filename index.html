@@ -163,6 +163,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-移动端和微信端禁止滚动条的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/11/移动端和微信端禁止滚动条的区别/">移动端和微信端禁止滚动条与PC端的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/11/移动端和微信端禁止滚动条的区别/" class="archive-article-date">
+  	<time datetime="2017-06-11T10:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>在pc端禁止滚动条一般都用overflow-y：hidden，这一点毋庸置疑，然而这样的写法在微信端和移动端竟然不起作用,亲测。。。（移动端和微信端禁止不掉）</strong></p>
+<ol>
+<li>然后我在body上添加了position：fixed，和height：100%；这样在移动端和微信端滚动条都有效的得到了禁止，但是又产生了新的问题<strong>微信端上边在手指滑动的过程中有向下滑动的过渡</strong></li>
+<li>这个时候可以禁止掉手机的默认滑动事件<br><code>$(&#39;body&#39;).on(&#39;touchmove&#39;, function (event) {
+ event.preventDefault();
+});</code></li>
+<li>但是新的问题随之就产生了：当页面运行在Safari浏览器之后，会有一些莫名的奇妙的问题出现，比如高度不够。。。</li>
+<li>经过上面踩的坑，我总结了一种方法去解决这个问题：</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<ol>
+<li>如果在微信上，就禁止默认滚动，并且连默认的上下缩滑都不能。</li>
+</ol>
+<ul>
+<li>当跳出到手机浏览器上则可以滑动。</li>
+</ul>
+<p style="color:orange;font-size:1.5rem">上面的思路实现：</p>
+
+<p>1、通过微信useragent来判断，如果是微信浏览器自动加入class去设置。</p>
+<p>2、非微信useragent就默认不加class。</p>
+<p>###首先判断是否运行在微信上<br>    <code>if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==&#39;micromessenger&#39;){/*去掉手机滑动默认行为*/$(&#39;body&#39;).on(&#39;touchmove&#39;, function (event) {
+    event.preventDefault();});
+    $(&#39;body&#39;).addClass(&#39;index_body&#39;);//添加禁止滚动的样式}else{ $(&#39;body&#39;).removeClass(&#39;index_body&#39;);//去除禁止滚动的样式}</code></p>
+<p>##我还收集了一些其他的隐藏滚动条的方法：</p>
+<p>1、body加position:fixed;width:100%;height:100%。</p>
+<p>2、给要滚动的元素添加一个父级，设定高度，overflow：auto。</p>
+<p>3、html,body{height:100%;overflow:hidden}。</p>
+<p sytle="color:orange">越努力，越幸运！</p>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/11/移动端和微信端禁止滚动条的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-js中实现页面跳转的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

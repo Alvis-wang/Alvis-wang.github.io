@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 文盲忙</title>
+  <title>移动端和微信端禁止滚动条与PC端的区别 | 文盲忙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript HTML5 CSS 前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文盲忙">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="在pc端禁止滚动条一般都用overflow-y：hidden，这一点毋庸置疑，然而这样的写法在微信端和移动端竟然不起作用,亲测。。。（移动端和微信端禁止不掉）  然后我在body上添加了position：fixed，和height：100%；这样在移动端和微信端滚动条都有效的得到了禁止，但是又产生了新的问题微信端上边在手指滑动的过程中有向下滑动的过渡 这个时候可以禁止掉手机的默认滑动事件$(&amp;#3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端和微信端禁止滚动条与PC端的区别">
+<meta property="og:url" content="http://yoursite.com/2017/06/11/移动端和微信端禁止滚动条的区别/index.html">
 <meta property="og:site_name" content="文盲忙">
-<meta property="og:description" content="JavaScript HTML5 CSS 前端">
+<meta property="og:description" content="在pc端禁止滚动条一般都用overflow-y：hidden，这一点毋庸置疑，然而这样的写法在微信端和移动端竟然不起作用,亲测。。。（移动端和微信端禁止不掉）  然后我在body上添加了position：fixed，和height：100%；这样在移动端和微信端滚动条都有效的得到了禁止，但是又产生了新的问题微信端上边在手指滑动的过程中有向下滑动的过渡 这个时候可以禁止掉手机的默认滑动事件$(&amp;#3">
+<meta property="og:updated_time" content="2017-06-11T13:22:49.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文盲忙">
-<meta name="twitter:description" content="JavaScript HTML5 CSS 前端">
+<meta name="twitter:title" content="移动端和微信端禁止滚动条与PC端的区别">
+<meta name="twitter:description" content="在pc端禁止滚动条一般都用overflow-y：hidden，这一点毋庸置疑，然而这样的写法在微信端和移动端竟然不起作用,亲测。。。（移动端和微信端禁止不掉）  然后我在body上添加了position：fixed，和height：100%；这样在移动端和微信端滚动条都有效的得到了禁止，但是又产生了新的问题微信端上边在手指滑动的过程中有向下滑动的过渡 这个时候可以禁止掉手机的默认滑动事件$(&amp;#3">
   
     <link rel="alternative" href="/atom.xml" title="文盲忙" type="application/atom+xml">
   
@@ -161,184 +162,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-移动端和微信端禁止滚动条的区别" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      移动端和微信端禁止滚动条与PC端的区别
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/11/移动端和微信端禁止滚动条的区别/" class="archive-article-date">
+
+        
+        <a href="/2017/06/11/移动端和微信端禁止滚动条的区别/" class="archive-article-date">
   	<time datetime="2017-06-11T10:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/11/移动端和微信端禁止滚动条的区别/">移动端和微信端禁止滚动条与PC端的区别</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>在pc端禁止滚动条一般都用overflow-y：hidden，这一点毋庸置疑，然而这样的写法在微信端和移动端竟然不起作用,亲测。。。（移动端和微信端禁止不掉）</strong></p>
+<ol>
+<li>然后我在body上添加了position：fixed，和height：100%；这样在移动端和微信端滚动条都有效的得到了禁止，但是又产生了新的问题<strong>微信端上边在手指滑动的过程中有向下滑动的过渡</strong></li>
+<li>这个时候可以禁止掉手机的默认滑动事件<br><code>$(&#39;body&#39;).on(&#39;touchmove&#39;, function (event) {
+ event.preventDefault();
+});</code></li>
+<li>但是新的问题随之就产生了：当页面运行在Safari浏览器之后，会有一些莫名的奇妙的问题出现，比如高度不够。。。</li>
+<li>经过上面踩的坑，我总结了一种方法去解决这个问题：</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<ol>
+<li>如果在微信上，就禁止默认滚动，并且连默认的上下缩滑都不能。</li>
+</ol>
+<ul>
+<li>当跳出到手机浏览器上则可以滑动。</li>
+</ul>
+<p style="color:orange;font-size:1.5rem">上面的思路实现：</p>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>1、通过微信useragent来判断，如果是微信浏览器自动加入class去设置。</p>
+<p>2、非微信useragent就默认不加class。</p>
+<p>###首先判断是否运行在微信上<br>    <code>if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==&#39;micromessenger&#39;){/*去掉手机滑动默认行为*/$(&#39;body&#39;).on(&#39;touchmove&#39;, function (event) {
+    event.preventDefault();});
+    $(&#39;body&#39;).addClass(&#39;index_body&#39;);//添加禁止滚动的样式}else{ $(&#39;body&#39;).removeClass(&#39;index_body&#39;);//去除禁止滚动的样式}</code></p>
+<p>##我还收集了一些其他的隐藏滚动条的方法：</p>
+<p>1、body加position:fixed;width:100%;height:100%。</p>
+<p>2、给要滚动的元素添加一个父级，设定高度，overflow：auto。</p>
+<p>3、html,body{height:100%;overflow:hidden}。</p>
+<p sytle="color:orange">越努力，越幸运！</p>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/11/移动端和微信端禁止滚动条的区别/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/10/js中实现页面跳转的方法/" class="archive-article-date">
-  	<time datetime="2017-06-10T12:47:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/js中实现页面跳转的方法/">““js中实现页面跳转的方法”</a>
-    </h1>
+  
+    <a href="/2017/06/10/js中实现页面跳转的方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">““js中实现页面跳转的方法”</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/10/js中confirm-用法详解/" class="archive-article-date">
-  	<time datetime="2017-06-10T08:33:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/10/js中confirm-用法详解/">js中confirm()用法详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/08/设置webstormlocalhost为本地IP/" class="archive-article-date">
-  	<time datetime="2017-06-07T16:00:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/08/设置webstormlocalhost为本地IP/">设置webstormlocalhost为本地IP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/30/Flex/" class="archive-article-date">
-  	<time datetime="2017-05-30T11:58:36.555Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/30/Flex/">浅析flex布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/28/关于MarkDown图片上传问题的建议/" class="archive-article-date">
-  	<time datetime="2017-05-28T12:21:31.968Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/28/关于MarkDown图片上传问题的建议/">关于MarkDown图片上传</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -361,8 +345,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
