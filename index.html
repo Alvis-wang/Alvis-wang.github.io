@@ -183,7 +183,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###页面跳转在实际开发中是必不可少的，下面我就总结一下几种常用的实现页面跳转的方法：</p>
+        <p><style><br>p{<br>font-size:1.5rem;<br>color:orange;</p>
+<p>}</p>
+<p></style></p>
+<p>###页面跳转在实际开发中是必不可少的，有效的页面跳转可以事半功倍，下面我就总结一下几种常用的实现页面跳转的方法：</p>
+<ol>
+<li>直接跳转的方式，利用location.href<br><br> <code>window.location.href = &quot;https:www.baidu.com&quot;</code><br><p>打开浏览器，页面将直接跳转至百度首页！</p><br><br>####2.0利用Windows的内置方法，back跳转(参数也可以不传)<br> <code>window.history.back(-1);</code><br><p>back() 方法可加载历史列表中的前一个 URL（如果存在）。</p><br>####3.0利用Windows的内置方法，go()跳转(参数也可以不传)<br><code>window.history.go(-1);</code></li>
+</ol>
+<p>###Javascript:history.go()和history.back()的用法和区别<br>简单的说就是：go(-1): 返回上一页，原页面表单中的内容会丢失；back(): 返回上一页，原页表表单中的内容会保留。 </p>
+<p>history.go(-1):后退+刷新<br>history.back():后退 </p>
+<p>之所以注意到这个区别，是因为不同的浏览器的后退行为也是有区别的，而区别就跟Javascript:history.go()和history.back()的区别类似。 </p>
+<p>chrome和ff浏览器后退页面，会刷新后退的页面，若有数据请求也会提交数据申请。类似于<br>history.go(-1) </p>
+<p>而safari（包括桌面版和ipad版本）的后退按钮则不会刷新页面，也不会提交数据申请。类似于<br>Javascript:history.back()。 </p>
+<p>####4.0利用self.location进行页面跳转<br>    //self.location=’<a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a>‘;<br>        self.location = ‘0.0测试界面.html’;</p>
+<p>####5.0指定自身跳转页面 top.location进行页面跳转。<br>     top.location = “0.0测试界面.html”;</p>
+<p>####6.0按钮式跳转<br>    <code>a href=&quot;#&quot; type=&quot;button&quot; onclick=&quot;href = &#39;0.0测试界面.html&#39;&quot;&gt;你好，点击跳转！&lt;/a&gt;</code><input type="button" onclick="location.href = '0.0测试界面.html'" value="你好，点击跳转！"><code>`&lt;button onclick=&quot;location.href = &#39;0.0测试界面.html&#39;&quot;&gt;你好，我是button，点击跳转！&lt;/button&gt;</code></p>
+<p>####7.0在新窗口里打开<br>    <code>&lt;a href=&quot;javascript:&quot; onClick=&quot;window.open(&#39;0.0测试界面.html&#39;)&quot;&gt;开新窗口&lt;/a&gt;</code><br>也可以加参数，控制打开窗口的大小等。。。<br><br>    <code>&lt;a href=&quot;javascript:&quot; onClick=&quot;window.open(&#39;0.0测试界面.html&#39;,&#39;&#39;,&#39;width=500,height=500&#39;)&quot;&gt;开新窗口&lt;/a&gt;</code></p>
+<p>####8.0利用location.replace进行页面跳转<br>    <code>window.location.replace(&quot;0.0测试界面.html&quot;);</code><br>该方法跳转后没有后退功能！</p>
+<p>##每天进步一点点，加油！</p>
 
       
 
